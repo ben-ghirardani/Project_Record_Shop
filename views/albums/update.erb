@@ -2,13 +2,15 @@
 
 <a href="/stock">Cancel</a>
 
-<form action="/stock" method="post">
+<form action="/albums/update-stock/<%= @album_edit.id %>" method="post">
 
 <!-- need action and method for my form -->
   
   <!-- need to put quotes around attribute value or it will cut off at one word. -->
+  Artist ID:<br>
+    <input type="text" name="artist_id" value= "<%= @album_edit.artist_id %>" ><br>
   Album Name:<br>
-    <input type="text" name="album_name" value= "<%= @album_edit.name %>" ><br> 
+    <input type="text" name="name" value= "<%= @album_edit.name %>" ><br> 
   Genre:<br>
     <input type="text" name="genre" value= "<%= @album_edit.genre %>" ><br>
   Wholesale Price:<br>

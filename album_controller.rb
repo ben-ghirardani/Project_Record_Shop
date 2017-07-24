@@ -12,3 +12,9 @@ end
 
 # set up a POST route so that data from the form can be posted back to the INDEX page.
 
+post '/albums/update-stock/:id' do
+Album.new(params).update
+redirect to '/stock'
+end
+
+
