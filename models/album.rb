@@ -23,7 +23,11 @@ class Album
   end
 
   def stock_levels
-    # write a method that looks at stock amount and gives a warning if it's below a certain level. WHILE loop? Or just IF? 
+    if @stock_amount < 3 
+      return "low stock, re-order"
+    else
+      return "stock ok"
+    end
   end
 
   # am I picking up artist_id correctly in the method below?

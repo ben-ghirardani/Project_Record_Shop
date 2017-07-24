@@ -17,6 +17,8 @@
     <th>Stock Amount</th>
     <th></th>
     <th>Markup</th>
+    <th></th>
+    <th>Re-Order?</th>
   </tr>
   <% for album in @albums %>
   <tr>
@@ -35,6 +37,8 @@
     <td><%= album.stock_amount %></td>
     <td>|</td>
     <td><%= album.markup %></td>
+    <td>|</td>
+    <td><%= album.stock_levels %></td>
   </tr>
   <% end %>
 </table>
