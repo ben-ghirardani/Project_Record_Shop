@@ -51,6 +51,16 @@ class Album
     SQLRunner.run(sql)
   end
 
+
+  # need to understand what first is doing
+  def artists()
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
+    artists = SQLRunner.run(sql)
+    result = artists.map{|artist| Artist.new(artist)}
+    return result.first
+  end
+
+
   def self.all()
     sql = "SELECT * FROM albums;"
     albums = SQLRunner.run(sql)
@@ -65,5 +75,9 @@ class Album
     return result
   end
   
+  def self.delete_all()
+    sql = "DELETE FROM albums"
+    SQLRunner.run(sql)
+  end
 
 end

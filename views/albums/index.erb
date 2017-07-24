@@ -1,10 +1,18 @@
-<h1>Albums</h1>
+<h1>Stock List</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Artist</th>
+    <th></th>
+    <th>Label</th>
+    <th></th>
+    <th>Album</th>
     <th></th>
     <th>Genre</th>
+    <th></th>
+    <th>Wholesale Price</th>
+    <th></th>
+    <th>Retail Price</th>
     <th></th>
     <th>Stock Amount</th>
     <th></th>
@@ -12,14 +20,21 @@
   </tr>
   <% for album in @albums %>
   <tr>
+    <td><%= album.artists.name %></td>
+    <td>|</td>
+    <td><%= album.artists.label %></td>
+    <td>|</td>
     <td><%= album.name %></td>
     <td>|</td>
     <td><%= album.genre %></td>
     <td>|</td>
-    <td> <%= album.stock_amount %> </td>
+    <td><%= album.wholesale_price %></td>
     <td>|</td>
-    <td> <%= album.markup %> </td>
+    <td><%= album.retail_price %></td>
+    <td>|</td>
+    <td><%= album.stock_amount %></td>
+    <td>|</td>
+    <td><%= album.markup %></td>
   </tr>
   <% end %>
 </table>
-
