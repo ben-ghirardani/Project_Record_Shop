@@ -1,0 +1,25 @@
+<h1>Albums</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Genre</th>
+    <th></th>
+    <th>Stock Amount</th>
+    <th></th>
+    <th>Markup</th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td><%= album.name %></td>
+    <td>|</td>
+    <td><%= album.genre %></td>
+    <td>|</td>
+    <td> <%= album.stock_amount %> </td>
+    <td>|</td>
+    <td> <%= album.markup %> </td>
+  </tr>
+  <% end %>
+</table>
+
