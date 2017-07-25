@@ -1,0 +1,50 @@
+<!-- this page originally appeared under /albums/index. If anything breaks check through the links and make sure everything points in the right direction -->
+
+<h1>Stock List</h1>
+ <br></br>
+ <a href="artists/new">Create New Artist</a> <a href="albums/new">Create New Album</a> 
+ <br></br>
+ <a href="artists">View Artists</a> <a href="albums">View Albums</a> 
+ <br></br>
+<table>
+  <tr>
+    <th>Artist</th>
+    <th></th>
+    <th>Label</th>
+    <th></th>
+    <th>Album</th>
+    <th></th>
+    <th>Genre</th>
+    <th></th>
+    <th>Wholesale Price</th>
+    <th></th>
+    <th>Retail Price</th>
+    <th></th>
+    <th>Stock Amount</th>
+    <th></th>
+    <th>Markup</th>
+    <th></th>
+    <th>Re-Order?</th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td><%= album.artists.name %></td>
+    <td>|</td>
+    <td><%= album.artists.label %></td>
+    <td>|</td>
+    <td><a href="albums/update-stock/<%= album.id %>"><%= album.name %></a></td>
+    <td>|</td>
+    <td><%= album.genre %></td>
+    <td>|</td>
+    <td><%= album.wholesale_price %></td>
+    <td>|</td>
+    <td><%= album.retail_price %></td>
+    <td>|</td>
+    <td><%= album.stock_amount %></td>
+    <td>|</td>
+    <td><%= album.markup %></td>
+    <td>|</td>
+    <td><%= album.stock_levels %></a></td>
+  </tr>
+  <% end %>
+</table>

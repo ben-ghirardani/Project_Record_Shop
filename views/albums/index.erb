@@ -1,48 +1,25 @@
-<h1>Stock List</h1>
- 
- <a href="artists/new">Create New Artist</a>
+<h1>Artists</h1>
 
- <a href="artists">View Artists</a> 
+<a href="/stock">Back to Stock</a>
 
 <table>
-  <tr>
-    <th>Artist</th>
-    <th></th>
-    <th>Label</th>
-    <th></th>
-    <th>Album</th>
-    <th></th>
-    <th>Genre</th>
-    <th></th>
-    <th>Wholesale Price</th>
-    <th></th>
-    <th>Retail Price</th>
-    <th></th>
-    <th>Stock Amount</th>
-    <th></th>
-    <th>Markup</th>
-    <th></th>
-    <th>Re-Order?</th>
-  </tr>
-  <% for album in @albums %>
-  <tr>
-    <td><%= album.artists.name %></td>
-    <td>|</td>
-    <td><%= album.artists.label %></td>
-    <td>|</td>
-    <td><a href="albums/update-stock/<%= album.id %>"><%= album.name %></a></td>
-    <td>|</td>
-    <td><%= album.genre %></td>
-    <td>|</td>
-    <td><%= album.wholesale_price %></td>
-    <td>|</td>
-    <td><%= album.retail_price %></td>
-    <td>|</td>
-    <td><%= album.stock_amount %></td>
-    <td>|</td>
-    <td><%= album.markup %></td>
-    <td>|</td>
-    <td><%= album.stock_levels %></a></td>
-  </tr>
-  <% end %>
+    
+    <tr>
+      <th>Artist</th>
+      <th></th>
+      <th>Label</th>
+      <th></th>
+      <th> </th>
+    </tr>
+    <% for artist in @artists %>
+    <tr>
+      <td><%= artist.name %></td>
+      <td>|</td>
+      <td><%= artist.label %></td>
+      <td>|</td>   
+      <td><a href="/artists/<%= artist.id %>/delete"> Delete Artist? </a></td>
+    </tr>
+    <% end %>
+
+
 </table>

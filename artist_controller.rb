@@ -20,13 +20,12 @@ post '/artists/new' do
 end
 
 
-
-get '/artists/delete/:id' do
-  @artist = Artist.new(params['id'])
+get '/artists/:id/delete' do
+  @artist = Artist.find(params['id'])
   erb(:"artists/delete")
 end 
 
-post '/artists/delete/:id' do
+post '/artists/:id/delete' do
   artist = Artist.find(params['id'])
   artist.delete
   redirect to '/artists'

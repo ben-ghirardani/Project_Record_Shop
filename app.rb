@@ -6,13 +6,10 @@ require_relative('artist_controller')
 
 get '/stock' do
   @albums = Album.all()
-  erb ( :"albums/index" )
+  erb ( :"index" )
 end
 
 
-get '/albums/new' do
-  erb(:"albums/new")
-end
 
 
 

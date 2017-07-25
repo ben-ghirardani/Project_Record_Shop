@@ -1,25 +1,31 @@
-set up create new artist then come back to this.
+<h1>New Album</h1>
+
+<a href="/stock">Cancel</a>
+<br></br>
+
+<form method="post" action="/albums">
+
+<select name="artist_id">
+<% for artist in @artists %> 
+  <option value="<%= artist.id %>"> <%= artist.name %> </option>
+  <% end %>
+</select>
+
+<br></br>
+Album Name:
+  <br><input type="text" name="name"></br>
+Genre:
+  <br><input type="text" name="genre"></br>
+Wholesale Price:
+  <br><input type="text" name="wholesale_price"></br>
+Retail Price:
+  <br><input type="text" name="retail_price"></br>
+Stock Amount:
+  <br><input type="text" name="stock_amount"></br>
+Cover Art URL:
+  <br><input type="text" name="cover_art"></br>
 
 
-<!-- <h1>New Stock Order</h1>
+<input type="submit">
 
-<a href="/stock">Stock List</a>
-
-<form>
-  
-  Band Name:
-    <br><input type="text" name="band_name"></br>
-  Label:
-    <br><input type="text" name="label"></br>
-  Album Name:
-    <br><input type="text" name="album_name"></br>
-  Genre:
-    <br><input type="text" name="genre"></br>
-  Wholesale Price:
-    <br><input type="text" name="wholesale_price"></br>
-  Retail Price:
-    <br><input type="text" name="retail_price"></br>
-  Amount:
-    <br><input type="text" name="amount"></br>
-
-</form> -->
+</form>

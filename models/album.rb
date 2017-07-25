@@ -56,7 +56,7 @@ class Album
   end
 
 
-  # need to understand what first is doing
+  # check what first is doing
   def artists()
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
     artists = SQLRunner.run(sql)
