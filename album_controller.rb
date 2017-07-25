@@ -30,4 +30,15 @@ Album.new(params).update
 redirect to '/stock'
 end
 
+get '/albums/:id/delete' do
+  @album = Album.find(params['id'])
+  erb(:"albums/delete")
+end 
+
+post '/albums/:id/delete' do
+  album = Album.find(params['id'])
+  album.delete
+  redirect to '/albums'
+end
+
 
