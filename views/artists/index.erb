@@ -1,9 +1,27 @@
-<h1>Stock List</h1>
+<h1>Artists</h1>
 
-<% for stock in @stock_list %>
+<a href="/stock">Back to Stock</a>
 
-<% stock = Artist.albums %>
+<table>
+  <tr>
+    <th>Artist</th>
+    <th></th>
+    <th>Label</th>
+    <th></th>
+    <th> </th>
+  </tr>
+  <% for artist in @artists %>
+  <tr>
+    <td><%= artist.name %></td>
+    <td>|</td>
+    <td><%= artist.label %></td>
+    <td>|</td>
 
-<%=  %>  
+    <td><%= artist.id %></td>
+    <td>|</td>    
 
-<% end %>
+    <!-- <td> <a href="/artists/delete/:id">Delete Artist?</a> </td>
+    <td>|</td> -->
+  </tr>
+  <% end %>
+  </table>

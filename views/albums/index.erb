@@ -1,6 +1,8 @@
 <h1>Stock List</h1>
  
- <a href="albums/new">Create New Order</a>
+ <a href="artists/new">Create New Artist</a>
+
+ <a href="artists">View Artists</a> 
 
 <table>
   <tr>
@@ -40,7 +42,7 @@
     <td>|</td>
     <td><%= album.markup %></td>
     <td>|</td>
-    <td><a href="/increment-stock/<%= album.id %>"><%= album.stock_levels %></a></td>
+    <td><%= album.stock_levels %></a></td>
   </tr>
   <% end %>
 </table>
