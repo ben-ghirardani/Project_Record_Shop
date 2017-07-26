@@ -20,12 +20,12 @@ post '/albums' do
  redirect to '/stock'
 end
 
-get '/albums/update-stock/:id' do
-  @album_edit = Album.find(params['id'])
-  erb(:"albums/update")
+get '/albums/:id/edit' do
+  @album = Album.find(params['id'])
+  erb(:"albums/edit")
 end
 
-post '/albums/update-stock/:id' do
+post '/albums/:id/edit' do
 Album.new(params).update
 redirect to '/stock'
 end

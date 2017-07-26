@@ -1,22 +1,27 @@
 <h1>Artists</h1>
 
+<div class="link">
 <a href="/stock">Back to Stock</a>
+</div>
 
 <table>
   <tr>
     <th>Artist</th>
-    <th></th>
     <th>Label</th>
-    <th></th>
-    <th> </th>
+    <th>Delete Artist?</th>
   </tr>
   <% for artist in @artists %>
   <tr>
     <td><%= artist.name %></td>
-    <td>|</td>
     <td><%= artist.label %></td>
-    <td>|</td>   
-    <td><a href="/artists/<%= artist.id %>/delete"> Delete Artist? </a></td>
+    
+<!-- code I'm happy with -->
+    <% if artist.albums.count > 0 %>
+      <td>delete albums first</td>
+    <% else %>
+      <td><a href="/artists/<%= artist.id %>/delete"> Yes </a></td>
+    <% end %>
+
   </tr>
   <% end %>
   </table>

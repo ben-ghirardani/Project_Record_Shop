@@ -1,0 +1,25 @@
+<h1>Update Stock of: <%= @album.name %> by <%= @album.artists.name %> </h1>
+<br></br>
+<div class="link">
+<a href="/stock">Cancel</a>
+</div>
+<br></br>
+<form action="/albums/<%= @album.id %>/edit" method="post">
+  <br></br>
+  
+<!-- need to keep artist ID for foreign key violations but don't want it to be edited, made it read-only -->
+  Artist ID:<br>
+    <input type="text" name="artist_id" value= "<%= @album.artist_id %>" readonly><br>
+
+  Album Name:<br>
+    <input type="text" name="name" value= "<%= @album.name %>" ><br> 
+  Genre:<br>
+    <input type="text" name="genre" value= "<%= @album.genre %>" ><br>
+  Wholesale Price:<br>
+    <input type="text" name="wholesale_price" value= "<%= @album.wholesale_price %>" ><br>
+  Retail Price:<br>
+    <input type="text" name="retail_price" value= "<%= @album.retail_price %>" ><br>
+  Stock Amount:<br>
+      <input type="text" name="stock_amount" value= "<%= @album.stock_amount %>" ><br>
+      <input type="submit">
+</form>

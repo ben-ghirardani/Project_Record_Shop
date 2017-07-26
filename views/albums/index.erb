@@ -1,21 +1,22 @@
 <h1>Albums</h1>
 
+<div class="link">
 <a href="/stock">Back to Stock</a>
+</div>
 
 <table>
     
     <tr>
       <th>Album Name</th>
-      <th></th>
+      <th>Band Name</th>
       <th>Genre</th>
       <th></th>
     </tr>
     <% for album in @albums %>
     <tr>
       <td><%= album.name %></td>
-      <td>|</td>
+      <td> <%= album.artists.name %> </td>
       <td><%= album.genre %></td>
-      <td>|</td>   
       <td><a href="/albums/<%= album.id %>/delete"> Delete Album? </a></td>
     </tr>
     <% end %>

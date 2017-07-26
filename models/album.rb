@@ -24,9 +24,9 @@ class Album
 
   def stock_levels
     if @stock_amount < 3 
-      return "low stock, re-order"
+      return "low stock"
     else
-      return "stock ok"
+      return "ok"
     end
   end
 
