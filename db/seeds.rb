@@ -17,10 +17,19 @@ artist3 = Artist.new( { 'name' => 'Arctic Monkeys',
 artist4 = Artist.new( { 'name' => 'Ed Sheeran',
                         'label' => 'Asylum' } )
 
+artist5 = Artist.new( { 'name' => 'Regina Spektor',
+                        'label' => 'Sire' } )
+
+artist6 = Artist.new( { 'name' => 'Amy Winehouse',
+                        'label' => 'Island' } )
+
 artist1.save()
 artist2.save()
 artist3.save()
 artist4.save()
+artist5.save()
+artist6.save()
+
 
 album1 = Album.new( { 'name' => 'Gish',
                       'genre' => 'Grunge',
@@ -94,6 +103,24 @@ album8 = Album.new( { 'name' => 'multiply',
                       'stock_amount' => 2
   } )
 
+album9 = Album.new( { 'name' => 'Songs',
+                      'genre' => 'folk',
+                      'cover_art' => 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/ReginaSpektorSongs.jpg/220px-ReginaSpektorSongs.jpg',
+                      'wholesale_price' => '4',
+                      'retail_price' => '12',
+                      'artist_id' => artist5.id,
+                      'stock_amount' => 7
+  } )
+
+album10 = Album.new( { 'name' => 'Back to Black',
+                      'genre' => 'RnB',
+                      'cover_art' => 'https://en.wikipedia.org/wiki/Back_to_Black#/media/File:Amy_Winehouse_-_Back_to_Black_(album).png',
+                      'wholesale_price' => '6',
+                      'retail_price' => '15',
+                      'artist_id' => artist6.id,
+                      'stock_amount' => 10
+  } )
+
 album1.save()
 album2.save()
 album3.save()
@@ -102,6 +129,6 @@ album5.save()
 album6.save()
 album7.save()
 album8.save()
-# anything =  album1.artists
-# binding.pry
-# nil
+album9.save()
+album10.save()
+
