@@ -1,16 +1,47 @@
 body {
-    /*background-color: #D7CEC7;*/
-    background-color: #F5DEB3;
-
+    background-color: #FFFFE0;
     background-size: 100%;
 }
 
 h1  {
   text-align: center;
-  color: #565656;
+  color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    background-color: #C0C0C0;
+}
+
+.nav-bar {
+  width: 30em;
+  margin: 0 auto;
 }
 
 .link {
   text-align: center;
+  font-size: 1.5em;
+}
+
+th {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+td {
+ padding-right: 0.5em;
+ padding-left: 0.5em; 
 }
 

@@ -2,3 +2,6 @@ input[type="submit"] {
   text-transform: uppercase;
 }
 
+.centre-form {
+  text-align: center;
+}

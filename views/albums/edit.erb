@@ -4,6 +4,8 @@
 <a href="/stock">Cancel</a>
 </div>
 <br></br>
+
+<div class="centre-form">
 <form action="/albums/<%= @album.id %>/edit" method="post">
   <br></br>
   
@@ -23,3 +25,4 @@
       <input type="text" name="stock_amount" value= "<%= @album.stock_amount %>" ><br>
       <input type="submit">
 </form>
+</div>
