@@ -37,11 +37,11 @@
 
 
   <% if album.markup <= 4 && album.stock_amount <= 5 %>
-    <td> Order more stock </td>
+    <td><a href="albums/<%= album.id %>/edit">Order more stock</a></td>
   <% elsif album.markup >=5 && album.markup <= 8 && album.stock_amount <10 %>
-    <td> Order more stock </td>
+    <td><a href="albums/<%= album.id %>/edit">Order more stock</a></td>
   <% elsif album.markup >= 9 && album.stock_amount <= 15 %>
-  <td> Order more stock </td>
+  <td><a href="albums/<%= album.id %>/edit">Order more stock</a></td>
   <% else %>
   <td> Stock ok </td>
   <% end %>
