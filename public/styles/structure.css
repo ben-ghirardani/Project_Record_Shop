@@ -1,5 +1,7 @@
 body {
-    background-color: #D7CEC7;
+    /*background-color: #D7CEC7;*/
+    background-color: #F5DEB3;
+
     background-size: 100%;
 }
 
@@ -11,3 +13,4 @@ h1  {
 .link {
   text-align: center;
 }
+
