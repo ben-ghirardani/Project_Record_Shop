@@ -3,7 +3,6 @@ require_relative('./artist')
 
 class Album
 
-  # edit this to only include what's needed
   attr_accessor :id, :name, :genre, :cover_art, :wholesale_price, :retail_price, :artist_id, :stock_amount
 
   def initialize(options)
@@ -22,15 +21,7 @@ class Album
     return result
   end
 
-  def stock_levels
-    if @stock_amount < 3 
-      return "low stock"
-    else
-      return "ok"
-    end
-  end
 
-  # am I picking up artist_id correctly in the method below?
   def save()
     sql = "INSERT INTO albums (name, genre, cover_art, wholesale_price, retail_price, artist_id, stock_amount) VALUES ('#{@name}', '#{@genre}', '#{@cover_art}', '#{wholesale_price}', '#{@retail_price}', '#{@artist_id}', '#{@stock_amount}') RETURNING id"
     saved_album = SQLRunner.run(sql)
@@ -56,7 +47,6 @@ class Album
   end
 
 
-  # check what first is doing
   def artists()
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
     artists = SQLRunner.run(sql)

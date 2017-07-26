@@ -1,5 +1,5 @@
 body {
-    background-color: #FFFFE0;
+    background-color: #FFFAFA;
     background-size: 100%;
 }
 
@@ -17,16 +17,25 @@ ul {
 
 li {
     float: left;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    border-top: : 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
 }
 
 li a {
     display: block;
     padding: 8px;
-    background-color: #C0C0C0;
+    background-color: #DCDCDC;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
 }
 
 .nav-bar {
-  width: 30em;
+  width: 33em;
   margin: 0 auto;
 }
 

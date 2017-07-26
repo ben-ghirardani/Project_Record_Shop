@@ -34,7 +34,19 @@
     <td><%= album.retail_price %></td>
     <td><%= album.stock_amount %></td>
     <td><%= album.markup %></td>
-    <td><%= album.stock_levels %></a></td>
+
+
+  <% if album.markup <= 4 && album.stock_amount <= 5 %>
+    <td> Order more stock </td>
+  <% elsif album.markup >=5 && album.markup <= 8 && album.stock_amount <10 %>
+    <td> Order more stock </td>
+  <% elsif album.markup >= 9 && album.stock_amount <= 15 %>
+  <td> Order more stock </td>
+  <% else %>
+  <td> Stock ok </td>
+  <% end %>
+
+
   </tr>
   <% end %>
 </table>

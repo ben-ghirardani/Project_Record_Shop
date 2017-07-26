@@ -4,7 +4,6 @@ require('pg')
 
 class Artist
 
-  # edit this to only include what's needed
   attr_accessor :id, :name, :label
 
   def initialize(options)
